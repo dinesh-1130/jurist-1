@@ -23,7 +23,7 @@ const ruleCards = [
   {
     title: "Competition Format",
     description:
-      "Starts online with prelims and quarters, then transitions onsite for semifinals and finale to test performance under varied environments.",
+      "The competition begins with virtual preliminaries and quarter-finals, progressing to on-site semi-finals and a grand finale - testing legal reasoning, adaptability, and courtroom presence through complex corporate law issues, mirroring real-world legal practice.",
     icon: <FaProjectDiagram className="text-xl text-purple-800" />,
     image: "/assets/social-3.jpg",
   },

@@ -7,7 +7,7 @@ export default function RegisterInfo() {
           <p className="text-sm uppercase font-semibold mb-2 text-[#6B21A8]">JURISTQUEST 2025</p>
           <h2 className="text-4xl font-bold text-gray-800">Unlock Your Legal Journey</h2>
           <p className="text-gray-600 mt-2">
-            Join the South’s Premier Moot Court Challenge for Budding Legal Minds
+           Join India’s Prestigious Moot Court Marathon
           </p>
         </div>
 
@@ -21,8 +21,8 @@ export default function RegisterInfo() {
             <h3 className="text-xl font-bold text-[#6B21A8] mb-4">Eligibility</h3>
             <p className="text-gray-700 mb-6 text-sm leading-relaxed">
               Open to law students enrolled in <br />
-              3-year or 5-year programs across South India, <br />
-              studying in recognized institutions.
+               in 3-Year or 5-Year LL.B degree  programs <br />
+             from recognized South Indian law colleges.
             </p>
           </div>
 
@@ -58,7 +58,7 @@ export default function RegisterInfo() {
           <p className="text-sm uppercase font-semibold text-[#6B21A8]">JuristQuest 2025</p>
           <h2 className="text-3xl font-bold leading-snug mt-2">Unlock Your Legal Journey</h2>
           <p className="text-sm text-gray-600 mt-4">
-            South India’s premier moot court challenge for ambitious legal minds.
+         Join India’s Prestigious Moot Court Marathon
           </p>
         </div>
 
@@ -70,7 +70,7 @@ export default function RegisterInfo() {
             <div>
               <h4 className="text-base font-semibold text-[#6B21A8]">Eligibility</h4>
               <p className="text-sm text-gray-700 leading-snug mt-1">
-                Open to students in 3- or 5-year law courses from recognized colleges in South India.
+              open to law students enrolled in 3-Year or 5-Year LL.B degree programs from recognized South Indian law colleges.
               </p>
             </div>
           </div>
