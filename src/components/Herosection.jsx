@@ -76,7 +76,7 @@ export default function HeroSection() {
           src="/assets/new-2.png"
           loading="lazy"
           alt="Hero Background"
-          className="absolute top-0 left-0 w-full h-full object-cover object-[62%_top] sm:object-[center_top] z-0"
+          className="absolute top-0 left-0 w-full h-full object-cover object-[60%_top] sm:object-[center_top] z-0"
         />
 
         {/* Hero Content */}

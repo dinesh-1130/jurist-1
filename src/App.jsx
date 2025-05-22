@@ -18,6 +18,8 @@ import Whoweare from "./components/Whoweare"
 
 import Aboutus from "./components/InnerPages/Aboutus"
 
+import SuccessStories from "./components/SuccessStories"
+
 import { useEffect } from "react";
 import FAQ from "./components/FAQ"
 
@@ -43,6 +45,8 @@ function Home() {
 </div>
 
 <SocialResponsibility />
+
+<SuccessStories />
 
 <div id="faqs">
   <FAQ />

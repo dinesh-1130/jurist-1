@@ -1,87 +1,160 @@
-// import { useEffect } from "react";
-// import AOS from "aos";
-// import "aos/dist/aos.css";
-// import { FaBullhorn, FaHandshake, FaAward } from "react-icons/fa";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
-// export default function SponsorSection() {
-//   useEffect(() => {
-//     AOS.init({ duration: 800, once: true });
-//   }, []);
+const mootCourtCommittee = [
+  { name: "Mr. Mahesh M", title: "JuristQuest – Moot Court Committee\nSr. Advocate" },
+  { name: "Ms. Lisha R", title: "JuristQuest – Moot Court Committee\nAdvocate" },
+  { name: "Mr. Subramanya", title: "JuristQuest – Moot Court Committee\nAdvocate" },
+  { name: "Ms. Jaishree MN", title: "JuristQuest – Moot Court Committee\nAdvocate" },
+  { name: "Mr. Ayush", title: "JuristQuest – Moot Court Committee\nAdvocate & Founder of lawjurist.com portal" },
+];
 
-//   return (
-//     <section className="bg-gradient-to-br from-white via-purple-50 to-white py-24 px-4 font-['Lato']">
-//       <div className="max-w-6xl mx-auto text-center mb-16">
-//         <p className="text-sm font-semibold" style={{ color: "#7B941C" }}>
-//           Sponsorship
-//         </p>
-//         <h2 className="text-4xl font-bold text-gray-900">
-//           Why Sponsor <span style={{ color: "#7B941C" }}>JuristQuest 2025?</span>
-//         </h2>
-//         <p className="mt-4 text-gray-700 max-w-2xl mx-auto text-sm">
-//           Partner with India's premier moot court competition and gain unparalleled access to the country’s future legal minds, top-tier professionals, and media exposure.
-//         </p>
-//       </div>
+const organizingCommittee = [
+  { name: "Mr. Prasad RK", title: "JuristQuest – Organizing Committee Head\nCorporate Lawyer\nManaging Partner – Crosby Law Associates" },
+  { name: "Mr. Sutheesh", title: "JuristQuest – Organizing Committee Member" },
+  { name: "Mr. Samuel", title: "JuristQuest – Organizing Committee Member" },
+  { name: "Mr. Suresh P", title: "JuristQuest – Organizing Committee Member" },
+  { name: "Mr. Sarath", title: "JuristQuest – Organizing Committee Member" },
+  { name: "Mr. Rajesh", title: "JuristQuest – Organizing Committee Member" },
+  { name: "Mr. Selvaraj", title: "JuristQuest – Organizing Committee Member" },
+  { name: "Mr. Dinesh", title: "JuristQuest – Organizing Committee Member" },
+];
 
-//       {/* Vertical Timeline Design */}
-//       <div className="relative max-w-4xl mx-auto space-y-10 border-l-2 pl-8" style={{ borderColor: "#D9E4B0" }}>
-//         {/* Item 1 */}
-//         <div data-aos="fade-up" className="relative group">
-//           <span className="absolute -left-5 top-1.5 w-3 h-3 rounded-full" style={{ backgroundColor: "#7B941C" }}></span>
-//           <div className="bg-white backdrop-blur-md border rounded-xl p-6 shadow-xl group-hover:shadow-md transition" style={{ borderColor: "#E4EFD2" }}>
-//             <div className="flex items-center gap-3 mb-2">
-//               <FaBullhorn className="text-xl" style={{ color: "#7B941C" }} />
-//               <h4 className="text-lg font-semibold" style={{ color: "#5E7014" }}>Premier Brand Visibility</h4>
-//             </div>
-//             <p className="text-sm text-gray-600">
-//               Stand out through event branding, media coverage, and digital campaigns across top legal and youth platforms.
-//             </p>
-//           </div>
-//         </div>
+export default function TeamSection() {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
 
-//         {/* Item 2 */}
-//         <div data-aos="fade-up" data-aos-delay="100" className="relative group">
-//           <span className="absolute -left-5 top-1.5 w-3 h-3 rounded-full" style={{ backgroundColor: "#7B941C" }}></span>
-//           <div className="bg-white backdrop-blur-md border rounded-xl p-6 shadow-xl group-hover:shadow-md transition" style={{ borderColor: "#E4EFD2" }}>
-//             <div className="flex items-center gap-3 mb-2">
-//               <FaHandshake className="text-xl" style={{ color: "#7B941C" }} />
-//               <h4 className="text-lg font-semibold" style={{ color: "#5E7014" }}>Meaningful Engagement</h4>
-//             </div>
-//             <p className="text-sm text-gray-600">
-//               Interact with students, nominate speakers or judges, and gain on-stage recognition during key moments.
-//             </p>
-//           </div>
-//         </div>
+  const AvatarIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-[#6B21A8]" viewBox="0 0 64 64" fill="white">
+      <circle cx="32" cy="32" r="32" fill="#6B21A8" />
+      <path d="M32 18a8 8 0 100 16 8 8 0 000-16zm0 18c-5.33 0-16 2.67-16 8v2h32v-2c0-5.33-10.67-8-16-8z" fill="white" />
+    </svg>
+  );
 
-//         {/* Item 3 */}
-//         <div data-aos="fade-up" data-aos-delay="200" className="relative group">
-//           <span className="absolute -left-5 top-1.5 w-3 h-3 rounded-full" style={{ backgroundColor: "#7B941C" }}></span>
-//           <div className="bg-white backdrop-blur-md border rounded-xl p-6 shadow-xl group-hover:shadow-md transition" style={{ borderColor: "#E4EFD2" }}>
-//             <div className="flex items-center gap-3 mb-2">
-//               <FaAward className="text-xl" style={{ color: "#7B941C" }} />
-//               <h4 className="text-lg font-semibold" style={{ color: "#5E7014" }}>Custom Sponsorship Tiers</h4>
-//             </div>
-//             <p className="text-sm text-gray-600">
-//               Choose from diverse options — Title, Associate, Certificate, International Program and more — aligned with your brand.
-//             </p>
-//           </div>
-//         </div>
-//       </div>
+const renderMembers = (members) => {
+  const chunkArray = (arr, size) => {
+    const chunks = [];
+    for (let i = 0; i < arr.length; i += size) {
+      chunks.push(arr.slice(i, i + size));
+    }
+    return chunks;
+  };
 
-//       {/* CTA Button */}
-//       <div className="text-center mt-12">
-//         <a
-//           href="/register"
-//           className="text-white px-8 py-3 rounded-full font-semibold transition"
-//           style={{
-//             backgroundColor: "#7B941C",
-//             display: "inline-block",
-//           }}
-//           onMouseOver={(e) => (e.target.style.backgroundColor = "#678319")}
-//           onMouseOut={(e) => (e.target.style.backgroundColor = "#7B941C")}
-//         >
-//           Sponsor now
-//         </a>
-//       </div>
-//     </section>
-//   );
-// }
+  const rows = chunkArray(members, 3); // 3 items per row on md+
+
+  return (
+    <div className="space-y-10">
+      {rows.map((row, rowIndex) => (
+        <div
+          key={rowIndex}
+          className={`flex flex-wrap gap-8 ${
+            row.length === 2 ? "justify-center" : "justify-start"
+          } max-w-6xl mx-auto`}
+        >
+          {row.map((member, index) => (
+            <div
+              key={index}
+              data-aos="fade-up"
+              className="bg-white hover:shadow-xl transition rounded-xl p-6 text-center group w-full sm:w-[45%] md:w-[30%]"
+            >
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-[#F1E7FA] flex items-center justify-center border-4 border-[#C4A0E8] overflow-hidden">
+                <AvatarIcon />
+              </div>
+              <h3 className="font-semibold text-black text-lg group-hover:text-[#6B21A8] transition-colors">
+                {member.name}
+              </h3>
+              <p className="text-sm whitespace-pre-line text-black group-hover:text-[#6B21A8] transition-colors">
+                {member.title}
+              </p>
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+
+
+  const renderSwiper = (members) => (
+    <div className="sm:hidden max-w-xs mx-auto">
+      <Swiper
+        spaceBetween={20}
+        slidesPerView={1}
+        pagination={{
+          clickable: true,
+          el: ".custom-swiper-pagination",
+          bulletClass: "swiper-pagination-bullet",
+          bulletActiveClass: "swiper-pagination-bullet-active",
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        {members.map((member, index) => (
+          <SwiperSlide key={index}>
+            <div
+              data-aos="fade-up"
+              className="bg-white hover:shadow-xl transition rounded-xl p-6 text-center group"
+            >
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-[#F1E7FA] flex items-center justify-center border-4 border-[#C4A0E8] overflow-hidden">
+                <AvatarIcon />
+              </div>
+              <h3 className="font-semibold text-black text-lg group-hover:text-[#6B21A8] transition-colors">
+                {member.name}
+              </h3>
+              <p className="text-sm whitespace-pre-line text-black group-hover:text-[#6B21A8] transition-colors">
+                {member.title}
+              </p>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <div className="custom-swiper-pagination mt-6 flex justify-center" />
+    </div>
+  );
+
+  return (
+    <section className="bg-gradient-to-b from-white to-[#f3f6ec] py-24 px-6 font-['Lato']">
+      <div className="max-w-7xl mx-auto text-center mb-14">
+        <p className="text-sm font-semibold mb-2 text-[#6B21A8]">Our Team</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+          Meet the Team Behind <span className="text-[#6B21A8]">JuristQuest 2025</span>
+        </h2>
+        <p className="mt-4 text-gray-600 text-sm max-w-2xl mx-auto">
+          A fusion of seasoned legal minds and visionary leaders committed to delivering an extraordinary moot court experience.
+        </p>
+      </div>
+
+      <div className="max-w-7xl mx-auto text-left mb-10">
+        <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Moot Court Committee Members</h3>
+        {renderMembers(mootCourtCommittee)}
+        {renderSwiper(mootCourtCommittee)}
+      </div>
+
+      <div className="max-w-7xl mx-auto text-left mt-20">
+        <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Organizing Committee Members</h3>
+        {renderMembers(organizingCommittee)}
+        {renderSwiper(organizingCommittee)}
+      </div>
+
+      <style jsx>{`
+        .swiper-pagination-bullet {
+          background-color: #e0c8f2;
+          opacity: 1;
+          margin: 0 5px !important;
+          width: 10px;
+          height: 10px;
+        }
+        .swiper-pagination-bullet-active {
+          background-color: #6B21A8;
+        }
+      `}</style>
+    </section>
+  );
+}
